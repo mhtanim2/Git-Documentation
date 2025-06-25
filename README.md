@@ -1,9 +1,19 @@
 # A Quick Reference to Git
 
 - [Initialize a Git Repo](#initialize-a-git-repo)
+- [Check Status](#check-status)
+- [Adding File/Files to Staging Area](#adding-file)
+- [Commit](#commit)
+- [Check Difference](#check-difference)
+- [List All Commits](#list-all-commits)
+- [View Details of a Commit](#view-details-of-a-commit)
+- [Back to Previous Commit](#back-to-previous-commit)
+- [Git Ignore Commited File](#commit-ignore)
+- [Move to a Specific Branch](#move-to-a-specific-branch)
+- [Move to the HEAD or the latest Brnach](#move-to-the-or-the-latest-brnach)
+- [View Commit Logs of a Specific File](#view-commit-logs-of-a-specific-file)
 
-
-### <a id="initialize-a-git-repo"></a>1. Initialize a Git Repo [ git init ]
+## 1. <a id="initialize-a-git-repo"></a>Initialize a Git Repo [ git init ]
 
 Inside the directory in which you want to initialize a repo-
 
@@ -11,7 +21,7 @@ Inside the directory in which you want to initialize a repo-
 git init
 ```
 
-### 2. Check Status [ git status ]
+## 2. <a id="check-status"></a>Check Status [ git status ]
 
 ```bash
 git status
@@ -35,7 +45,7 @@ In the result-
 A means - files added to staging area
 M means - modified files
 
-### 3. Adding File/Files to Staging Area [ git add ]
+## 3. <a id="adding-file"></a>Adding File/Files to Staging Area [ git add ]
 
 -Adding by file name
 
@@ -49,7 +59,7 @@ git add <filename1 filename2 ....  filenamen>
 git add .
 ```	
 	
-### 4. commit [ git commit ]
+## 4. commit [ git commit ]<a id="commit"></a>
 
 -Initial Commit
 
@@ -79,7 +89,7 @@ git add <files>
 git commit
 ```	
 	
-### 5. Check Difference [ git diff ]
+## 5. Check Difference [ git diff ]<a id="check-difference"></a>
 
 ```bash
 #Difference between working directory and staging area
@@ -92,7 +102,7 @@ This command will display what have been changed in the repository after the las
 
 
 
-### 6. List All Commits [ git log ]
+### 6. List All Commits [ git log ]<a id="list-all-commits"></a>
 
 a. this command will list all the commits with commit hash, author and summary
 
@@ -203,14 +213,14 @@ For example,
 	
 
 	
-### 7. View Details of a Commit [ git show ]
+## 7. View Details of a Commit [ git show ]<a id="view-details-of-a-commit"></a>
 
 ```bash
 #in commit list by git log command there is a long value called the commit hash.
 git show <hash value, at least 4 or 5 chars from the left side>
 ```
 
-### 8. Back to the previous Commit [ git reset --hard <moving_commit_id> ]
+## 8. Back to Previous Commit [ git reset --hard <moving_commit_id> ]<a id="Back-to-previous-commit"></a>
 
 ```bash
 #in commit log there are log id.
@@ -232,19 +242,28 @@ git show <hash value, at least 4 or 5 chars from the left side>
 ```bash
 git reset --hard <moving_commit_id>
 git reset --hard fda01907e3a1c25ed2755b3f7f1cf200bb069f2c>
-```	
+```
+### Git Ignore Commited File<a id="commit-ignore"></a>
+- What
+	- It put commited file to ignore file   
+- Why
+	- Sometimes commited file need to be added in ignore profile
+- How
+	```
+	git rm --cashed fileNmae.type
+	```
 
-### 9. Move to a Specific Branch [git checkout]
+## 9. Move to a Specific Branch [git checkout]<a id="move-to-a-specific-branch"></a>
 
 	git checkout hash_value [at least 4- 5 chars of the commit hash]
 	
 
-### 10. Move to the HEAD or the latest Brnach [git checkout]
+## 10. Move to the HEAD or the latest Brnach [git checkout]<a id="move-to-the-or-the-latest-brnach"></a>
 
 	git checkout master
 	
 	
-### 11. View Commit logs of a specific file [git log]
+## 11. View Commit logs of a specific file [git log]<a id="view-commit-logs-of-a-specific-file"></a>
 
 	git log file_name
 	
